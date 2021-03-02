@@ -37,21 +37,59 @@ class SignInPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: 8.0,
+            height: 48.0,
           ),
           CustomRaisedButton(
-            text: "Sign In with Google",
+            child: BuildRow(
+              image: 'images/google-logo.png',
+              text: "Sign In with Google",
+              textColor: Colors.black,
+            ),
             color: Colors.white,
             onPressed: () {},
-            textColor: Colors.black,
           ),
           SizedBox(
             height: 8.0,
           ),
           CustomRaisedButton(
+            child: BuildRow(
+              image: 'images/facebook-logo.png',
+              text: 'Sign In with FaceBook',
+            ),
             color: Colors.blue,
-            text: 'Sign In with FaceBook',
             onPressed: () {},
+          ),
+          SizedBox(
+            height: 8.0,
+          ),
+          CustomRaisedButton(
+            child: BuildText(
+              text: 'Sign In with Email',
+              textColor: Colors.white,
+            ),
+            onPressed: () {},
+            color: Colors.teal[300],
+          ),
+          SizedBox(
+            height: 8.0,
+          ),
+          Text(
+            'or',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 18.0,
+            ),
+          ),
+          SizedBox(
+            height: 8.0,
+          ),
+          CustomRaisedButton(
+            child: BuildText(
+              textColor: Colors.white,
+              text: 'Go Anonymous',
+            ),
+            onPressed: () {},
+            color: Colors.lime[300],
           ),
         ],
       ),
