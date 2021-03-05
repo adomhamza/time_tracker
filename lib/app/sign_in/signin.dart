@@ -23,6 +23,19 @@ class SignInPage extends StatelessWidget {
     }
   }
 
+  Future<void> _signInWithGoogle() async {
+    try {
+      await auth.signInWithGoogle();
+
+      // CircularProgressIndicator(
+      //   backgroundColor: Colors.black,
+      // );
+
+    } catch (e) {
+      print(e.toString());
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +80,7 @@ class SignInPage extends StatelessWidget {
               textColor: Colors.black,
             ),
             color: Colors.white,
-            onPressed: () {},
+            onPressed: _signInWithGoogle,
           ),
           SizedBox(
             height: 8.0,
